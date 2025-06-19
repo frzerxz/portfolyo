@@ -24,14 +24,49 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 section {
   scroll-margin-top: 40px;
   padding-top: 40px;
 }
 
-.layout {
-  display: flex;
+.app-bg {
   min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  padding: 1rem;
+}
+
+.layout {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Logo pozisyonu ve hover efekti */
+.layout > a:first-child {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+}
+
+.layout > a:first-child:hover {
+  transform: translateY(-2px) rotate(5deg) !important;
+}
+
+.layout > a:first-child:hover > div {
+  box-shadow: 0 8px 20px rgba(94, 96, 206, 0.4);
+  background: linear-gradient(135deg, #6930c3 0%, #5e60ce 100%);
 }
 
 .sidebar {
@@ -82,11 +117,19 @@ section {
 
 .main-content {
   flex: 1;
-  padding: 3rem 2rem;
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 2rem;
+}
+
+.main-content section {
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.main-content section.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card {
@@ -106,6 +149,13 @@ section {
 h1, h2, h3 {
   font-weight: 700;
   color: var(--primary);
+}
+
+/* Aktif menü öğesi için stil */
+.sidebar nav a.active {
+  background: rgba(94, 96, 206, 0.2);
+  color: #fff;
+  border-left: 3px solid #5e60ce;
 }
 
 @media (max-width: 900px) {
