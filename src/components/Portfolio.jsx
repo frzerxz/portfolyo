@@ -8,13 +8,13 @@ const projects = [
   {
     title: "Portfolyo Projesi",
     desc: "Kişisel portfolyo web sitesi. React ile geliştirilmiş modern ve responsive tasarım.",
-    img: "https://raw.githubusercontent.com/frzerxz/portfolyo/main/public/portfolio-preview.png",
+    img: "https://placehold.co/600x400/5e60ce/ffffff?text=Portfolio+Project",
     link: "https://github.com/frzerxz/portfolyo.git"
   },
   {
     title: "Music Sound Projesi",
     desc: "Müzik çalma uygulaması. React kullanılarak geliştirilmiş interaktif bir web uygulaması.",
-    img: "https://raw.githubusercontent.com/frzerxz/music_sound/main/public/music-preview.png",
+    img: "https://placehold.co/600x400/5e60ce/ffffff?text=Music+Sound+App",
     link: "https://github.com/frzerxz/music_sound.git"
   }
 ];
