@@ -5,15 +5,22 @@
   "homepage": ".",
   "dependencies": {
     "react": "^18.2.0",
+    "react-confetti": "^6.4.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
+    "react-router-dom": "^7.6.2",
     "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^4.9.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "CI=false && react-scripts build",
+    "build:analyze": "CI=false && npm run build && npx webpack-bundle-analyzer build/static/js/*.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lighthouse": "npx lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html"
   },
   "browserslist": {
     "production": [

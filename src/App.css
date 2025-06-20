@@ -11,6 +11,29 @@
   --shadow: 0 4px 32px 0 rgba(94, 96, 206, 0.10);
 }
 
+/* Loading spinner styles */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(94, 96, 206, 0.1);
+  border-left: 4px solid var(--secondary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  will-change: transform;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 body, html, #root, .app-bg {
   min-height: 100vh;
   margin: 0;
@@ -53,6 +76,7 @@ section {
   top: 1rem;
   left: 1rem;
   z-index: 1000;
+  will-change: transform;
 }
 
 .layout > a:first-child:hover {
@@ -102,6 +126,7 @@ section {
   transition: color 0.2s, background 0.2s;
   padding: 0.3rem 1rem;
   border-radius: 1rem;
+  will-change: color, background;
 }
 
 .sidebar nav a.active,
@@ -112,18 +137,23 @@ section {
 
 /* Ana içerik alanı */
 .main-content {
-  margin-left: 250px; /* Sidebar genişliği kadar margin */
   flex: 1;
-  min-height: 100vh;
-  padding: 2rem 3rem;
+  margin-left: 250px;
 }
 
 .main-content section {
+  width: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
-  padding: 2rem 0;
+  will-change: opacity, transform;
 }
 
 .main-content section.active {
@@ -131,18 +161,19 @@ section {
   transform: translateY(0);
 }
 
+/* Card stilleri */
 .card {
-  background: var(--card-bg);
-  border-radius: 1.2rem;
-  box-shadow: var(--shadow);
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border: 1px solid var(--accent);
-  width: fit-content;
-  max-width: 100%;
-  min-width: 260px;
-  margin-left: auto;
-  margin-right: auto;
+  background: rgba(56, 189, 248, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3rem;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgba(56, 189, 248, 0.2);
 }
 
 h1, h2, h3 {

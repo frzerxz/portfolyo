@@ -20,37 +20,15 @@ const projects = [
 ];
 
 const Portfolio = () => (
-  <div className="card">
-    <h2>Portfolyo</h2>
-    <div className="portfolio-list" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+  <div className="card portfolio-container">
+    <h2 className="portfolio-title">Portfolyo</h2>
+    <div className="portfolio-list">
       {projects.map((p, i) => (
-        <a href={p.link} target="_blank" rel="noopener noreferrer" className="portfolio-item" key={i} style={{ 
-          background: '#f7f6fd', 
-          borderRadius: '1rem', 
-          boxShadow: '0 2px 8px 0 #a084ee22', 
-          textDecoration: 'none', 
-          color: '#3a3d7c', 
-          padding: '1rem',
-          transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-          ':hover': {
-            transform: 'translateY(-5px)',
-            boxShadow: '0 5px 15px 0 #a084ee33'
-          }
-        }}>
-          <img 
-            src={p.img} 
-            alt={p.title} 
-            style={{ 
-              width: '100%', 
-              height: '160px', 
-              objectFit: 'cover', 
-              borderRadius: '0.7rem',
-              marginBottom: '1rem'
-            }} 
-          />
-          <div>
-            <h4 style={{ color: '#5e60ce', margin: '0.5rem 0 0.2rem 0', fontSize: '1.2rem' }}>{p.title}</h4>
-            <p style={{ color: '#666', fontSize: '0.95rem', lineHeight: '1.4' }}>{p.desc}</p>
+        <a href={p.link} target="_blank" rel="noopener noreferrer" className="portfolio-item" key={i}>
+          <img src={p.img} alt={p.title} className="portfolio-img" />
+          <div className="portfolio-info">
+            <h4 className="portfolio-item-title">{p.title}</h4>
+            <p className="portfolio-item-desc">{p.desc}</p>
           </div>
         </a>
       ))}
