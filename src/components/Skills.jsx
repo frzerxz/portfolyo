@@ -7,42 +7,42 @@ const Skills = () => (
   <div className="card">
     <h2>Neler Yapabilirim?</h2>
     <p>Programlama Dilleri ve Teknolojiler</p>
-    <div style={{ display: 'flex', gap: '2.5rem', flexWrap: 'wrap', alignItems: 'center', fontSize: '2.2rem', marginTop: '1rem' }}>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div className="skills-grid">
+      <div className="skill-item">
         <SiC color="#00599C" />
-        <span style={{ fontSize: '1rem', marginTop: '0.3rem' }}>C</span>
+        <span>C</span>
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="skill-item">
         <SiCplusplus color="#004482" />
-        <span style={{ fontSize: '1rem', marginTop: '0.3rem' }}>C++</span>
+        <span>C++</span>
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="skill-item">
         <SiCsharp color="#68217a" />
-        <span style={{ fontSize: '1rem', marginTop: '0.3rem' }}>C#</span>
+        <span>C#</span>
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="skill-item">
         <FaHtml5 color="#e44d26" />
-        <span style={{ fontSize: '1rem', marginTop: '0.3rem' }}>HTML5</span>
+        <span>HTML5</span>
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="skill-item">
         <FaCss3Alt color="#1572b6" />
-        <span style={{ fontSize: '1rem', marginTop: '0.3rem' }}>CSS3</span>
+        <span>CSS3</span>
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="skill-item">
         <FaJs color="#f7df1e" />
-        <span style={{ fontSize: '1rem', marginTop: '0.3rem' }}>JavaScript</span>
+        <span>JavaScript</span>
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="skill-item">
         <FaReact color="#61dafb" />
-        <span style={{ fontSize: '1rem', marginTop: '0.3rem' }}>React</span>
+        <span>React</span>
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="skill-item">
         <FaPython color="#3776ab" />
-        <span style={{ fontSize: '1rem', marginTop: '0.3rem' }}>Python</span>
+        <span>Python</span>
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="skill-item">
         <FaJava color="#e76f00" />
-        <span style={{ fontSize: '1rem', marginTop: '0.3rem' }}>Java</span>
+        <span>Java</span>
       </div>
     </div>
   </div>

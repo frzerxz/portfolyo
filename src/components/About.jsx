@@ -1,10 +1,8 @@
 import React from "react";
 import "./About.css";
-import profileImage from "../assets/avatar.jpg";
 
 const About = () => (
   <div className="card about-container">
-    <img src={profileImage} alt="Firuze Eroğlu" className="about-profile-img" />
     <h2 className="about-title">Ben Kimim?</h2>
     <p className="about-text">
       Ben Firuze Eroğlu. Balıkesir Üniversitesi Bilgisayar Mühendisliği 3.
