@@ -246,9 +246,7 @@
 
 .fx-button-container {
   margin-top: auto;
-  padding-top: 2rem;
-  display: flex;
-  justify-content: center;
+  padding-top: 0;
 }
 
 .hacked-overlay {
